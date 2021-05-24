@@ -1,0 +1,116 @@
+<%- include('./partials/head'); %>
+<%- include('./partials/styles'); %>
+<%- include('./partials/nav'); %>
+
+<div class="page">
+  <!-- semantic ui header  -->
+    <h1 class="ui header violet" style="margin-bottom: 0">
+    <div class="content">
+      <i class="edit icon"></i>
+      Edit and Enable Banner
+    </div>
+    <div class="sub header">
+      <em>You can view the current site banner by visiting <a href="https://rosecityresource.streetroots.org/" target="_blank">the live site</a></em>
+    </div>
+    </h1>
+
+    <div class="ui form-container">
+      <div class="container-content">
+      <div class="banner-info">
+        <!-- <strong>Instructions:</strong> -->
+        Enter the information you want displayed in the site banner, formatted using HTML.
+      </div>
+      <p></p>
+  
+      <!-- FORM  -->
+      <form class="ui form" id="form">
+        <!-- textarea  -->
+        <div class="field textarea-div">
+          <!-- <label>Banner content</label> -->
+          <textarea 
+            name="content"
+            id="banner-html"
+            aria-label="Input to enter HTML and text for the site banner" 
+            placeholder="Banner text...">
+          </textarea>
+        </div>
+
+        <button class="ui button violet fluid" type="button" onClick="showPreview()">Update preview</button>
+
+
+        <div class="ui divider"></div>
+        <!-- checkbox & submit button -->
+        <div class="toggle-and-submit ui segment">
+          <div class="ui toggle checkbox" style="margin: 1em">
+            <input type="checkbox" tabindex="0" class="hidden" 
+              name="isEnabled" id="isEnabled" /> 
+            <label>Enable site banner</label>
+          </div><br />
+
+          <button class="ui button violet basic" type="submit">
+            Update live site
+          </button>
+        </div>
+        </div> 
+      </form> 
+    </div>
+  </div>
+
+<script>
+  $('.ui.checkbox')
+  .checkbox();
+
+  /* ---------- preview logic -------------- */
+  function showPreview() {
+    let textBoxValue = document.getElementById('banner-html').value;
+    let outputDiv = document.getElementById('output');
+
+    if (textBoxValue === "") { outputDiv.innerHTML = "<em>Enter text to see banner preview</em>" }
+    outputDiv.innerHTML = textBoxValue;
+  }
+
+  /* form submit helper fn */
+  function confirmSubmit() {
+    return confirm('This will update the banner on rosecityresource.streetroots.org. Are you sure you want to proceed?');
+  }
+
+  /* ---------- form submit -------------- */
+  let form  = document.getElementById('form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const content = form.elements['content'].value.trim();
+    const isEnabled = form.elements['isEnabled'].checked;
+
+    // check for data
+    if (content && isEnabled) { 
+      // ask the user if they're sure
+      if (confirmSubmit()) { 
+
+        (async () => {
+          const rawResponse = await fetch('/admin/set-site-banner', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({content: content, isEnabled: isEnabled})
+          });
+          const result = await rawResponse.text(); 
+          // TODO: Kent - is there a better way to confirm success? or is this the best way to do it?
+          if (result === "Created") {
+            alert('Banner successfully updated!')
+          }  else {
+            alert('Something went wrong. Please try again')
+          }
+
+        })();
+      } 
+    } else {
+      // if values are missing
+      alert("You must enter text content and click 'Enable site banner' to update the site. Please check your input and try again") 
+    }
+  });
+
+</script>
+</div>
