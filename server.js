@@ -22,6 +22,8 @@ app.use(helmet.hidePoweredBy({ setTo: 'GNU Terry Pratchett' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.use(express.static('public'))
+
 // FOR PRODUCTION USE
 // app.use(function(req, res, next) {
 //   /* Add Cache-Control headers to all requests */

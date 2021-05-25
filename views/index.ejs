@@ -5,13 +5,13 @@
   .content-home {
     margin-left: 3em;
     margin-right: 3em;
-    margin-top: 1em;
+    padding-top: 1em;
   }
 </style>
 
-<main class="content-home">
+<div class="content-home">
   <!-- site title, includes contact icons  -->
-    <%- include('./partials/header'); %>
+    <%- include('./content/header'); %>
     <div class="ui divider"></div>
   <!-- /site title  -->
 
@@ -19,21 +19,20 @@
     <%- include('./partials/navVertical'); %>
   <!-- /side menu  -->
 
+  <main class="main">
+    <!-- about  -->
+    <%- include('./content/about'); %>
 
-
-  <div class="main" style="display: flex; height: 75vh; align-items: center">
-
-
-
-
-
+    <div class="ui divider"></div>
 
 
 
 
+
+
+
+  </main>
 </div>
-
-</main>
 
 
 <!-- each of these sections will be conditionally displayed, based on what variable is passed in by Node -->
