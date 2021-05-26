@@ -16,6 +16,82 @@
     border-radius: 7px;
   }
 
+  /* .demo-image {
+    border: 1.5px solid lightgrey; 
+    border-radius: 7px
+  } */
+
+  /* for gif!!!  */
+  .object-and-details {
+    display: inline-block;
+    position: relative;
+    border: 1.5px solid lightgrey; 
+    border-radius: 7px;
+  }
+
+summary {
+  color: #fff;
+  background: #000;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  border-radius: 50%;
+  background-image: url("https://assets.codepen.io/128034/play_circle_filled-24px.svg");
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  opacity: 0.35;
+}
+
+[open] summary {
+  background-image: url("https://assets.codepen.io/128034/pause_circle_filled-24px.svg");
+  box-shadow: 0 0 0 2px #fff;
+  background-color: white;
+}
+
+/* for blink/webkit */
+details summary::-webkit-details-marker {
+  display: none;
+}
+/* for firefox */
+details > summary:first-of-type {
+  list-style: none;
+}
+
+summary + * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* padding: 1rem;
+  padding-top: 3rem;
+  background: #000; */
+  color: #fff;
+  overflow-y: auto;
+}
+
+summary + * a {
+  color: #fff;
+}
+summary:focus {
+  box-shadow: 0 0 0 0.25rem #aade87;
+  outline: transparent;
+}
+
+.object-and-details1 img {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: visible;
+}
+
+
 </style>
 
 <section class="work-div">
@@ -35,10 +111,19 @@
   <p>
     For my Capstone Project, I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
   </p>
-  <p style="color: grey">
-    <img src="https://i.imgur.com/pkhYUwc.gif" class="ui image capstone-gif"
-      style="max-width: 550px" />
-  </p>
+
+  <div class="object-and-details">
+    <img src="https://i.imgur.com/A088719.png" class="ui image demo-image"
+    style="max-width: 550px" loading="lazy">
+    <details open>
+   
+      <summary role="button" aria-label="static image"></summary>
+      <div class="object-and-details1">
+        <img src="https://i.imgur.com/pkhYUwc.gif" class="ui image demo-image" style="max-width: 550px" loading="lazy">
+      </div>
+    </details>
+  </div>
+
   <p>
     The app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
   </p>
@@ -91,4 +176,24 @@
 
 
 </section>
+<script>
+  // accessibility code for users who have the "reduced motion" setting enabled on their browsers
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce))");
+  const details = document.querySelector(".object-and-details > details");
 
+  if (mediaQuery.matches) {
+    details.removeAttribute("open");
+  }
+</script>
+
+
+<!-- images:
+
+<img src="https://i.imgur.com/pkhYUwc.gif" class="ui image capstone-gif"
+style="max-width: 550px" />
+<img src="https://i.imgur.com/A088719.png" class="ui image capstone-gif"
+style="max-width: 550px" /> -->
+
+<!-- semantic ui icons:
+pause circle
+play circle -->

@@ -1,0 +1,115 @@
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 2rem;
+  }
+
+.object-and-details {
+  display: inline-block;
+  position: relative;
+}
+
+summary {
+  color: #fff;
+  background: #000;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  border-radius: 50%;
+  background-image: url("https://assets.codepen.io/128034/play_circle_filled-24px.svg");
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+
+[open] summary {
+  background-image: url("https://assets.codepen.io/128034/pause_circle_filled-24px.svg");
+  box-shadow: 0 0 0 2px #fff;
+  background-color: white;
+}
+
+/* for blink/webkit */
+details summary::-webkit-details-marker {
+  display: none;
+}
+/* for firefox */
+details > summary:first-of-type {
+  list-style: none;
+}
+
+summary + * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  padding-top: 3rem;
+  background: #000;
+  color: #fff;
+  overflow-y: auto;
+}
+
+summary + * a {
+  color: #fff;
+}
+summary:focus {
+  box-shadow: 0 0 0 0.25rem #aade87;
+  outline: transparent;
+}
+
+.object-and-details1 img {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: visible;
+}
+</style>
+
+<!-- CODE  -->
+
+<h1>gif de-animation​ using <code>details/summary</code></h1>
+
+<div class="object-and-details">
+  <img src="https://assets.codepen.io/128034/stopl_1.JPG" alt="Static: Alan Partridge - would it be rude to stop listening to you?" loading="lazy">
+  <details open>
+    <!-- added role=button to summary to resolve iOS funkiness -->
+    <summary role="button" aria-label="static image"></summary>
+    <div class="object-and-details1">
+      <img src="https://assets.codepen.io/128034/stopl.gif" alt="Animated: Alan Partridge - would it be rude to stop listening to you?" loading="lazy">
+    </div>
+  </details>
+</div>
+
+
+<script>
+  
+  // way 1
+//   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce))");
+// const details = document.querySelector(".object-and-details > details");
+
+// if (mediaQuery.matches) {
+//   details.removeAttribute("open");
+// }
+
+
+// way 2 
+$("#imgAnimate").hover(
+        function()
+        {
+            $(this).attr("src", "GIF URL HERE");
+        },
+        function()
+        {
+            $(this).attr("src", "STATIC IMAGE URL HERE");
+        });
+
+</script>
+
