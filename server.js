@@ -53,5 +53,10 @@ app.get('/', (req, res) => {
   res.render('index.ejs', { activeTab: 'home' })
 })
 
+app.get('/menu-test', (req, res) => {
+  res.render('menuTest.ejs', { activeTab: 'home' })
+})
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
