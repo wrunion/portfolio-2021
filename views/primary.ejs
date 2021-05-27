@@ -46,40 +46,41 @@
       <div class="item">
         <div class="header">Contact</div>
           <div class="menu">
-            <a class="item">LinkedIn</a>
-            <a class="item">Github</a>
+            <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
+              <i class="ui icon external alternate"></i> LinkedIn
+            </a>
+            <a class="item" href="https://github.com/wrunion" target="_blank" rel="noreferrer">
+              <i class="ui icon external alternate"></i> Github</a>
           </div>
       </div>
     </div>
   </nav>
   <div class="pusher">
 
-<div class="content-home">
-  <!-- site title, includes contact icons  -->
-    <%- include('./content/header'); %>
-    <div class="ui divider"></div>
-  <!-- /site title  -->
+    <div class="content-home">
+      <!-- site title, includes contact icons  -->
+        <%- include('./content/header'); %>
+        <div class="ui divider"></div>
+      <!-- /site title  -->
 
-  <main class="main">
-    <!-- about  -->
-    <%- include('./content/about'); %>
+      <main class="main">
+        <!-- about  -->
+        <%- include('./content/about'); %>
 
-    <div class="ui divider"></div>
+        <div class="ui divider"></div>
 
-    <%- include('./content/work'); %>
+        <%- include('./content/work'); %>
+        <%- include('./content/skills'); %>
 
 
-
-  </main>
-</div>
-
-    <!-- site content here  -->
-
+      </main>
+    </div>
   </div>
+  <%- include('./content/footer'); %>
 </body>
 
 <script>
-  
+
   $('.ui.sidebar')
     .sidebar('setting', 'dimPage', false)
     .sidebar('setting', 'transition', 'overlay')
