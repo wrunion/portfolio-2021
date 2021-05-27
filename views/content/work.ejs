@@ -1,3 +1,6 @@
+<%- include('./../partials/head'); %>
+<%- include('./../partials/styles'); %>
+
 <style>
   .work-div {
     /* display: flex;  */
@@ -5,29 +8,35 @@
     margin-top: 2.5em;
     margin-bottom: 2.5em;
     margin-right: 250px;
+    margin-left: 2.5em;
+  }
+
+
+  /* .project-div {
+
+  } */
+
+  .work-text {
+    max-width: 550px;
+    text-align: justify; 
   }
 
   .about-text {
     margin-left: 2em;
   }
 
-  .capstone-gif {
+  .work-gif {
     border: 1.5px lightgrey solid; 
     border-radius: 7px;
-  }
-
-  /* .demo-image {
-    border: 1.5px solid lightgrey; 
-    border-radius: 7px
-  } */
-
-  /* for gif!!!  */
-  .object-and-details {
+    margin-top: .5em;
+    margin-bottom: 1em;
     display: inline-block;
     position: relative;
     border: 1.5px solid lightgrey; 
     border-radius: 7px;
   }
+
+  /* for gif "pause" functionality */
 
 summary {
   color: #fff;
@@ -91,15 +100,35 @@ summary:focus {
   overflow: visible;
 }
 
-.text {
-  max-width: 550px;
-}
-
 </style>
 
-<section class="work-div">
+<div class="work-div">
   <h2>Work</h2>
+
+  <!-- Evictorbook  -->
+  <section class="project-div work-text">
+
+    <h3>
+      <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
+        Anti Eviction Mapping Tool (Evictorbook)
+      </a>
+    </h3>
+
+
+    <div style="max-width: 550px">
+      <video controls width="100%" class="work-gif">
+        <source src="https://i.imgur.com/Rx0xupY.mp4" type="video/mp4">
+  
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+    <p></p><p></p>
+    <div class="ui divider"></div>
+  </section>
+  <!-- end eb -->
+
   <!-- Epicodus  -->
+  <section class="project-div work-text">
   <h3>
     <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
       Epicodus Capstone
@@ -116,7 +145,7 @@ summary:focus {
   </p>
 
   <!-- NYC gif  -->
-  <div class="object-and-details">
+  <div class="object-and-details work-gif">
     <img src="https://i.imgur.com/BUf4Iyx.png" class="ui image demo-image"
     style="max-width: 550px" loading="lazy">
     <details>
@@ -127,25 +156,24 @@ summary:focus {
       </div>
     </details>
   </div>
-  <p class="text">
+  <p class="work-text ">
     The app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
   </p>
   <p>
     <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">View the demo</a> | <a href="https://github.com/wrunion/epicodus-capstone" target="_blank" rel="noreferrer">View the code</a>
   </p>
+</section>
+<!-- end epicodus  -->
+
   <div class="ui divider"></div>
 
   <!-- MAC/RCR  -->
+  <section class="work-text">
   <h3>
     <a href="https://rosecityresource.streetroots.org" target="_blank" rel="noreferrer">
       Rose City Resource Guide
     </a>
   </h3>
-
-  <p style="color: grey">
-    [images, gifs, etc here. demo the site]
-  </p>
-
   <p>
     After Epicodus, I continued studying the User Experience Design of resource websites. My research led me to the Rose City Resource Guide, a collaboration with the Portland non-profit Street Roots, and the Mapping Action Collective. 
   </p>
@@ -153,6 +181,13 @@ summary:focus {
   <p>
     It’s a searchable site where people can find the resources they need, and it caught my eye right away. 
   </p>
+  <div style="max-width: 450px; margin-left: 5%">
+    <video controls width="100%" class="work-gif">
+      <source src="https://i.imgur.com/YbXJ32L.mp4" type="video/mp4">
+
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </div>
 
   <p>
     I said to myself, “I need to meet the people who wrote this code.” So I emailed them, and then I did. 
@@ -165,20 +200,21 @@ summary:focus {
   <p style="color: grey">
     [Talk about what I do at MAC. Already written.]
   </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <a href="https://rosecityresource.streetroots.org/" target="_blank" rel="noreferrer">View the live site</a> 
 </section>
+<div class="ui divider"></div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
 <script>
   // accessibility code for users who have the "reduced motion" setting enabled on their browsers
   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce))");
