@@ -7,13 +7,19 @@
     margin-right: 3em;
     padding-top: 1em;
   }
+
+  .menu-header-main {
+    padding-top: .75em;
+    padding-bottom: .25em;
+  }
+
 </style>
 
 <body>
   <nav>
   <div class="ui vertical sidebar right fixed menu">
     <div class="item">
-      <div class="header">
+      <div class="header menu-header-main">
         <i class="ui icon bars center aligned" onclick="toggle()"></i>
         Winter A. Runion
       </div>
@@ -54,10 +60,6 @@
     <div class="ui divider"></div>
   <!-- /site title  -->
 
-  <!-- sticky side menu  -->
-    <%- include('./partials/navVertical'); %>
-  <!-- /side menu  -->
-
   <main class="main">
     <!-- about  -->
     <%- include('./content/about'); %>
@@ -78,9 +80,14 @@
 
 <script>
   $('.ui.sidebar')
+    .sidebar('setting', 'dimPage', false)
     .sidebar('setting', 'transition', 'overlay')
-    .sidebar('show')
-  ;
+    .sidebar('toggle')
+    ;
+
+  //   $('#hamburger').click(() => {
+  //   $('.ui.sidebar').sidebar('show');
+  // });
 
   function toggle() { $('.ui.sidebar').sidebar('toggle') }
 </script>
