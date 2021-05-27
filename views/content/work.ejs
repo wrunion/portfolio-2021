@@ -2,6 +2,20 @@
 <%- include('./../partials/styles'); %>
 
 <style>
+
+  /* styles to put in styles  */
+  .mb-normal {
+    margin-bottom: 1.5em;
+  }
+
+  .mt-normal {
+    margin-top: 1.5em;
+  }
+
+  .mt-large {
+    margin-top: 3em;
+  }
+
   .work-div {
     /* display: flex;  */
     /* align-items: center; */
@@ -33,6 +47,12 @@
     display: inline-block;
     position: relative;
     border: 1.5px solid lightgrey; 
+    border-radius: 7px;
+  }
+
+  .video-container {
+    margin-top: .5em;
+    margin-bottom: 1em;
     border-radius: 7px;
   }
 
@@ -107,63 +127,97 @@ summary:focus {
 
   <!-- Evictorbook  -->
   <section class="project-div work-text">
-
     <h3>
-      <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
+      <a>
         Anti Eviction Mapping Tool (Evictorbook)
       </a>
     </h3>
+    <p>
+      The Anti Eviction Mapping Tool (also known as “Evictorbook”) is an ongoing project with a team of 15+ people from all disciplines. 
+    </p>
 
+    <p>
+      On the Anti Eviction Mapping Tool I:
+    </p>
+
+    UX/UI Design and Development:
+    <ul>
+      <li>
+        Trained under a UX developer with 7 years of industry experience
+      </li>
+      <li>
+        Learned to organize, conduct, and analyze user interviews
+      </li>
+      <li>
+        Took part in all stages of the UX Design process, from idea, to wireframes, to writing the code myself and actualizing the designs on the live site.
+      </li>
+    </ul>
+
+
+Front End Development: 
+<ul>
+  <li>
+    I also worked on the front end, using React the component libraries Antd Design and Material UI to create an accessible, mobile-friendly web application.
+  </li>
+  <li>
+    I conducted a thorough accessibility audit of the application, then implemented the changes step by step, working with a team of 3.
+  </li>
+  <li>
+    I also consulted on API design, and took part in collaborative design session with the data leads.
+  </li>
+</ul>
 
     <div style="max-width: 550px">
-      <video controls width="100%" class="work-gif">
+      <video controls width="100%" class="video-container">
         <source src="https://i.imgur.com/Rx0xupY.mp4" type="video/mp4">
   
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
-    <p></p><p></p>
+    <p class="mb-normal">
+      This mapping tool is not yet available for public viewing, but these images highlight the "eviction search" feature of the site.
+    </p>
     <div class="ui divider"></div>
   </section>
   <!-- end eb -->
 
   <!-- Epicodus  -->
-  <section class="project-div work-text">
-  <h3>
-    <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
-      Epicodus Capstone
-    </a>
-  </h3>
-  <p>
-    In 2020 I completed the JavaScript/React Front End Development Program at one of Portland's best known, in-person bootcamps: Epicodus. 
-  </p>
-  <!-- <p>
-    For my capstone project, I chose an area that's long been a passion of mine: helping people find the resources they need. I found an open-data API from New York City, that gave information about 1000+ social service resources available to women in NYC. These services provide everything from sports opportunities to health care, but most people don't know how to search an online database, which is hard to find in the first place. 
-  </p> -->
-  <p>
-    For my Capstone Project, I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
-  </p>
-
-  <!-- NYC gif  -->
-  <div class="object-and-details work-gif">
-    <img src="https://i.imgur.com/BUf4Iyx.png" class="ui image demo-image"
-    style="max-width: 550px" loading="lazy">
-    <details>
-   
-      <summary role="button" aria-label="static image"></summary>
-      <div class="object-and-details1">
-        <img src="https://i.imgur.com/pkhYUwc.gif" class="ui image demo-image" style="max-width: 550px" loading="lazy">
-      </div>
-    </details>
-  </div>
-  <p class="work-text ">
-    The app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
-  </p>
-  <p>
-    <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">View the demo</a> | <a href="https://github.com/wrunion/epicodus-capstone" target="_blank" rel="noreferrer">View the code</a>
-  </p>
-</section>
-<!-- end epicodus  -->
+  <section class="project-div work-text mt-normal">
+    <h3>
+      <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
+        NYC Social Service Search
+      </a>
+    </h3>
+    <p>
+      In 2020 I completed the JavaScript/React Front End Development Program at one of Portland's best known, in-person bootcamps: Epicodus. 
+    </p>
+    <!-- <p>
+      For my capstone project, I chose an area that's long been a passion of mine: helping people find the resources they need. I found an open-data API from New York City, that gave information about 1000+ social service resources available to women in NYC. These services provide everything from sports opportunities to health care, but most people don't know how to search an online database, which is hard to find in the first place. 
+    </p> -->
+    <p>
+      For my Capstone Project, I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
+    </p>
+  
+    <!-- NYC gif  -->
+    <div class="object-and-details work-gif">
+      <img src="https://i.imgur.com/BUf4Iyx.png" class="ui image demo-image"
+      style="max-width: 550px" loading="lazy">
+      <details>
+     
+        <summary role="button" aria-label="static image"></summary>
+        <div class="object-and-details1">
+          <img src="https://i.imgur.com/pkhYUwc.gif" class="ui image demo-image" style="max-width: 550px" loading="lazy">
+        </div>
+      </details>
+    </div>
+    <p class="work-text ">
+      The app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
+    </p>
+    <p>
+      <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">View the demo</a> | <a href="https://github.com/wrunion/epicodus-capstone" target="_blank" rel="noreferrer">View the code</a>
+    </p>
+  </section>
+  <!-- end epicodus  -->
 
   <div class="ui divider"></div>
 
@@ -182,7 +236,7 @@ summary:focus {
     It’s a searchable site where people can find the resources they need, and it caught my eye right away. 
   </p>
   <div style="max-width: 450px; margin-left: 5%">
-    <video controls width="100%" class="work-gif">
+    <video controls width="100%" class="video-container">
       <source src="https://i.imgur.com/YbXJ32L.mp4" type="video/mp4">
 
       Sorry, your browser doesn't support embedded videos.
@@ -197,13 +251,52 @@ summary:focus {
     That’s the story of how I met the two founders of the Mapping Action Collective a year ago, and I’ve been working with them full time ever since.
   </p>
 
-  <p style="color: grey">
-    [Talk about what I do at MAC. Already written.]
-  </p>
+ <p>
+  At MAC I am currently:
+ </p>
+
+ <ul>
+  <li>
+    Creating documentation for the administrative login system I created for the Rose City Resource Guide last winter.
+  </li>
+  <li>
+    Redesigning said login system, which involves designing with Figma, and then bringing my designs to life using Node, Express, and CSS, and EJS. 
+  </li>
+  <!-- possibly make this its own project??? with the in-progress wireframes, once they're ready to view???  -->
+  <li>
+    I’m also Product Owner on a second cousin project: The Oregon Youth Resource Map, which is a collaboration with Portland Statue University and the national mental health grant, Healthy Transitions. 
+  </li>
+  <li>
+    I’m the lead UX/UI designer for the Oregon Youth Resource Map. In a small team of 4, I also wear more hats than that, including Product Owner, but the role I most enjoy and excel at is UX/UI development.
+  </li>
+ </ul>
+
+ For Healthy Transitions, I use these technologies: 
+ <ul>
+   <li>
+    Figma
+   </li>
+   <li>
+    Adobe XD
+   </li>
+   <li>
+    HTML/CSS/JavaScript
+   </li>
+   <li>
+    React
+   </li>
+   <li>
+    EJS (Embedded JavaScript Templates), which allows me to reproduce React-like functionality with simplicity, and from the server side.
+   </li>
+   <li>
+    Node, Express, and Passport, to create a backend admin login system, for our clients to update their site data in real time
+   </li>
+ </ul>
+ 
+
   <a href="https://rosecityresource.streetroots.org/" target="_blank" rel="noreferrer">View the live site</a> 
 </section>
 <div class="ui divider"></div>
-
 
 
 
