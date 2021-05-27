@@ -25,58 +25,71 @@
       </div>
       </div>
       <div class="item">
-        <div class="header">About</div>
+        <a class="header" href="#about">About</a>
       </div>
       <div class="item">
-        <div class="header">Work</div>
+        <a class="header" href="#work">Work</a>
         <div class="menu">
-          <a class="item">Rose City Resource</a>
-          <a class="item">NYC Service Search</a>
-          <a class="item">Anti-Eviction Map</a>
+          <a class="item" href="#evictorbook">Anti-Eviction Map</a>
+          <a class="item" href="#epicodus">NYC Service Search</a>
+          <a class="item" href="#rose-city-resource">Rose City Resource</a>
         </div>
       </div>
       <div class="item">
-        <div class="header">Skills</div>
+        <a class="header" href="#skills">Skills</a>
         <div class="menu">
-          <a class="item">UX/UI Design</a>
-          <a class="item">Front End/React</a>
-          <a class="item">Full Stack Development</a>
+          <a class="item" href="#ux-ui">UX/UI Design</a>
+          <a class="item" href="#front-end">Front End/React</a>
+          <a class="item" href="#full-stack">Full Stack Development</a>
+          <a class="item" href="#education">Education</a>
         </div>
       </div>
       <div class="item">
-        <div class="header">Contact</div>
+        <a class="header" href="#contact">Contact</a>
           <div class="menu">
             <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
-              <i class="ui icon external alternate"></i> LinkedIn
+              <i class="ui icon linkedin alternate large"></i> LinkedIn
             </a>
             <a class="item" href="https://github.com/wrunion" target="_blank" rel="noreferrer">
-              <i class="ui icon external alternate"></i> Github</a>
+              <i class="ui icon github large"></i> Github
+            </a>
           </div>
       </div>
     </div>
   </nav>
+  <!-- this class enables the Semantic side menu to work as it does  -->
+  <!-- all non-sidebar page content belongs below  -->
   <div class="pusher">
 
     <div class="content-home">
-      <!-- site title, includes contact icons  -->
+      <!-- site title  -->
+      <header id="top">
         <%- include('./content/header'); %>
-        <div class="ui divider"></div>
-      <!-- /site title  -->
+      </header>
+
+      <div class="ui divider"></div>
 
       <main class="main">
         <!-- about  -->
-        <%- include('./content/about'); %>
-
+        <section id="about">
+          <%- include('./content/about'); %>
+        </section>
         <div class="ui divider"></div>
 
-        <%- include('./content/work'); %>
-        <%- include('./content/skills'); %>
+        <section id="work">
+          <%- include('./content/work'); %>
+        </section>
 
+        <section id="skills">
+          <%- include('./content/skills'); %>
+        </section>
 
       </main>
     </div>
   </div>
-  <%- include('./content/footer'); %>
+  <footer>
+    <%- include('./content/footer'); %>
+  </footer>
 </body>
 
 <script>
