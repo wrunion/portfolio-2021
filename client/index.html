@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- semantic links  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+    <!-- custom styles  -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- TODO: go back and import only the scripts for types of elements used (accordion, button, etc). check here for examples: https://cdnjs.com/libraries/semantic-ui -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <!-- elements used: form, container, button, input, checkbox -->
+    
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Winter A. Runion UX/UI Portfolio</title>
+  </head>
+<body>
+  <nav class="ui vertical sidebar right fixed menu" id="menu-div">
+    <div class="item">
+      <div class="header" id="header-title">
+        <i class="ui icon bars center aligned dark-grey-text large" onclick="toggle()"></i>
+        <a href="https://github.com/wrunion" target="_blank" rel="noreferrer">
+          <i class="ui icon link grey github large"></i> 
+        <!-- </a>   -->
+        <a href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
+          <i class="ui icon link grey linkedin large"></i> 
+        </a>
+      </div>
+      </div>
+      <div class="item">
+        <a class="header" href="#about">About</a>
+      </div>
+      <div class="item">
+        <a class="header" href="#work">Work</a>
+        <div class="menu">
+          <a class="item" href="#evictorbook">Anti-Eviction Map</a>
+          <a class="item" href="#epicodus">NYC Service Search</a>
+          <a class="item" href="#rose-city-resource">Rose City Resource</a>
+        </div>
+      </div>
+      <div class="item">
+        <a class="header" href="#skills">Skills</a>
+        <div class="menu">
+          <a class="item" href="#ux-ui">UX/UI Design</a>
+          <a class="item" href="#front-end">Front End/React</a>
+          <a class="item" href="#full-stack">Full Stack Development</a>
+          <a class="item" href="#education">Education</a>
+        </div>
+      </div>
+      <div class="item">
+        <a class="header" href="#contact">Contact</a>
+          <div class="menu">
+            <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
+              <i class="ui icon linkedin alternate large"></i> LinkedIn
+            </a>
+            <a class="item" href="https://github.com/wrunion" target="_blank" rel="noreferrer">
+              <i class="ui icon github large"></i> Github
+            </a>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pusher">
+
+    <div class="content-home">
+      <!-- site title  -->
+      <header id="top">
+        <div style="display: flex; justify-content: space-between; align-items: center">  
+
+          <h1 class="ui div violet center" style="margin-bottom: 0; text-align: left">
+            <div class="content" style="color: #2A00A2">
+              Winter A. Runion
+            </div>
+            <div class="sub header">
+              UX/UI Developer
+            </div>
+          </h1>
+
+          <div class="header-icons" style="position: absolute; right: 5%">
+            <a class="item" href="https://github.com/wrunion" target="_blank" rel="noreferrer">
+              <i class="ui icon github big grey link" style="margin-right: .5em"></i>
+            </a>
+            <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
+              <i class="ui icon linkedin big grey link" style="margin-right: .5em"></i>
+            </a>
+            <i class="ui icon bars big" onclick="toggle()"></i>
+          </div>
+          
+          <p></p>
+        </header>
+      </header>
+
+      <div class="ui divider"></div>
+      <main class="main">
+
+        <!-- About  -->
+        <section id="about">
+          <div class="about-div">
+            <div class="about-image">
+              <img src="public/images/profile.png" 
+                alt="Portrait of a white woman with brown hair and glasses in a red plaid collared shirt" 
+                class="ui image left aligned circular small" />
+              </div>
+
+              <div class="about-text body-text">
+                <p>
+                  I'm a UX/UI Developer based in Portland, Oregon.
+                </p>
+                <p>
+                  My favorite tools include: JavaScript, React, Figma, and good ol' fashioned HTML, and CSS.
+                </p>
+                <p>
+                  If it has to do with user experiences, I'm there.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="ui divider"></div>
+
+        <!-- Work  -->
+        <section id="work">
+          <div class="work-div">
+            <h2>Work</h2>
+          
+            <!-- Evictorbook  -->
+            <section class="project-div work-text" id="evictorbook">
+              <h3>
+                <a>
+                  Anti Eviction Mapping Tool (Evictorbook)
+                </a>
+              </h3>
+              <p>
+                The Anti Eviction Mapping Tool (also known as “Evictorbook”) is an ongoing project with a team of 15+ people from all disciplines. 
+              </p>
+          
+              <p>
+                On the Anti Eviction Mapping Tool I:
+              </p>
+          
+              UX/UI Design and Development:
+              <ul>
+                <li>
+                  Trained under a UX developer with 7 years of industry experience
+                </li>
+                <li>
+                  Learned to organize, conduct, and analyze user interviews
+                </li>
+                <li>
+                  Took part in all stages of the UX Design process, from idea, to wireframes, to writing the code myself and actualizing the designs on the live site.
+                </li>
+              </ul>
+          
+          
+          Front End Development: 
+          <ul>
+            <li>
+              I also worked on the front end, using React the component libraries Antd Design and Material UI to create an accessible, mobile-friendly web application.
+            </li>
+            <li>
+              I conducted a thorough accessibility audit of the application, then implemented the changes step by step, working with a team of 3.
+            </li>
+            <li>
+              I also consulted on API design, and took part in collaborative design session with the data leads.
+            </li>
+          </ul>
+          
+              <div style="max-width: 550px">
+                <video controls width="100%" class="video-container">
+                  <source src="https://i.imgur.com/Rx0xupY.mp4" type="video/mp4">
+            
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+              <p class="mb-normal">
+                This mapping tool is not yet available for public viewing, but these images highlight the "eviction search" feature of the site.
+              </p>
+              <div class="ui divider"></div>
+            </section>
+            <!-- end eb -->
+          
+            <!-- Epicodus  -->
+            <section class="project-div work-text mt-normal" id="epicodus">
+              <h3>
+                <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
+                  NYC Social Service Search
+                </a>
+              </h3>
+              <p>
+                In 2020 I completed the JavaScript/React Front End Development Program at one of Portland's best known, in-person bootcamps: Epicodus. 
+              </p>
+              <p>
+                For my Capstone Project, I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
+              </p>
+          
+            
+              <!-- NYC gif  -->
+              <div class="object-and-details work-gif">
+                <img src="https://i.imgur.com/BUf4Iyx.png" class="ui image demo-image"
+                style="max-width: 550px" loading="lazy">
+                <details>
+               
+                  <summary role="button" aria-label="static image"></summary>
+                  <div class="object-and-details1">
+                    <img src="https://i.imgur.com/pkhYUwc.gif" class="ui image demo-image" style="max-width: 550px" loading="lazy">
+                  </div>
+                </details>
+              </div>
+              <p class="work-text ">
+                The app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
+              </p>
+              <p>
+                <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">View the demo</a> | <a href="https://github.com/wrunion/epicodus-capstone" target="_blank" rel="noreferrer">View the code</a>
+              </p>
+            </section>
+            <!-- end epicodus  -->
+          
+            <div class="ui divider"></div>
+          
+            <!-- MAC/RCR  -->
+            <section class="work-text" id="rose-city-resource">
+            <h3>
+              <a href="https://rosecityresource.streetroots.org" target="_blank" rel="noreferrer">
+                Rose City Resource Guide
+              </a>
+            </h3>
+            <p>
+              The Rose City Resource Guide is a collaboration between the Portland non-profit Street Roots, and the Mapping Action Collective (MAC). It's a searchable map of free and low-cost resources for houseless adults in Oregon.
+            </p>
+            <p>  
+              I work at the Mapping Action Collective, and help maintain the site. I'm also creating technical documentation for Street Roots staff, and redesigning the entire UI, which has been exciting!   
+            </p>
+            <div style="max-width: 450px; margin-left: 5%">
+              <video controls width="100%" class="video-container">
+                <source src="https://i.imgur.com/YbXJ32L.mp4" type="video/mp4">
+          
+                Sorry, your browser doesn't support embedded videos. 
+              </video>
+            </div>
+            <!-- RCR LINK  -->
+            <p class="strong">
+              View the <a href="https://rosecityresource.streetroots.org/" target="_blank" rel="noreferrer">Rose City Resource Guide</a> live site 
+            </p>
+          <!-- <div class="mac"></div> -->
+              <p>
+                At MAC I am currently:
+              </p>
+          
+              <ul>
+                <li>
+                  Creating an interactive user guide to help the Street Roots staff update their data more easily 
+                </li>
+                <li>
+                  Redesigning the user interface, which means creating wireframes with Figma, then bringing them to life in code. 
+                </li>
+                <li>
+                  I'm co-lead on a spin-off project: Healthy Transitions.
+                </li>
+                <li>
+                  Healthy Transitions is a collaboration with Portland State University, to create a mapping application with mental health resources for youth in Oregon.
+                </li>
+                <li>
+                  I'm the lead UX/UI developer on a team of 4.
+                </li>
+                <li>
+                  Since it's a small team, I wear more hats than that, including Product Owner, but the role I most enjoy and excel at is UX/UI development. 
+                </li>
+              </ul>
+          
+            At MAC, I use use these technologies: 
+            <ul>
+              <li>
+                Figma
+              </li>
+              <li>
+                Adobe XD
+              </li>
+              <li>
+                HTML/CSS/JavaScript
+              </li>
+              <li>
+                React
+              </li>
+              <li>
+                EJS
+              </li>
+              <li>
+                Node.js, Express 
+              </li>
+            </ul>
+          
+          </section>
+          <div class="ui divider"></div>
+          
+          </div>
+        </section>
+
+        <!-- Skills  -->
+        <section id="skills">
+          <div class="work-div ui segment" style="max-width: 550px; margin-left: 3em">
+            <h2>Skills</h2>
+          
+            <p class="strong">
+              I'm a UX/UI designer with a background in visual art and strong skills in Front End web development. My skills include:
+            </p>
+          
+          <section id="front-end">
+          Front End Web Development
+            <ul>
+              <li>
+                JavaScript/React
+              </li>
+              <li>
+                React component libraries, including Semantic UI, Material UI, and Bootstrap React
+              </li>
+              <li>
+                HTML/CSS/SASS
+              </li>
+              <li>
+                If it's code that creates something for the user to see, I want to be there. 
+              </li>
+            </ul>
+          </section>
+          
+          <section id="ux-ui">
+          UX/UI Design and Development
+            <ul>
+              <li>
+                Creating wireframes and prototypes
+              </li>
+              <li>
+                Coordinating and conducting user research 
+              </li>
+              <li>
+                Using research insights to create user journeys and user flows
+              </li>
+              <li>
+                Bringing designs to life with React and CSS
+              </li>
+            </ul>
+          </section>
+          
+          <section id="full-stack">
+          Full Stack Development: 
+            <ul>
+              <li>
+                API creation with Node.js and Express
+              </li>
+              <li>
+                Working understanding of SQL, including PostgreSQL
+              </li>
+              <li>
+                User authentication with Passport.js
+              </li>
+              <li>
+                Deploying applications on Heroku
+              </li>
+              <li>
+                Building out static sites using EJS (Embedded JavaScript Templates)
+              </li>
+            </ul>
+          </section>
+          
+          <section id="education">
+            I have: 
+            <ul>
+              <li>
+                A Bachelor's of Art in Visual Art
+              </li>
+              <li>
+                5 years of experience in design and digital photography for my own design business
+              </li>
+              <li>
+                A JavaScript/React Front End Web Development Certification from Epicodus
+              </li>
+              <li>
+                A creative drive that never lets up
+              </li>
+            </ul>
+          </section>
+          
+          
+          I can: 
+          <ul>
+            <li>
+              Communicate clearly and effectively with teammates and clients
+            </li>
+            <li>
+              Work well on my own
+            </li>
+            <li>
+              Work well in diverse, interdisciplinary teams
+            </li>
+          </ul>
+          
+          I'm passionate about: 
+          <ul>
+            <li>
+              Web accessibility, first and foremost. Everyone should be able to access and enjoy everything I create
+            </li>
+            <li>
+              Equal access to healthcare and housing
+            </li>
+            <li>
+              Design justice, including language agnostic design
+            </li>
+          </ul>
+          
+          <p>
+            In my free time I visit parks, read too much, and tango dance.
+          </p>
+          
+          <div class="ui divider"></div>
+          
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              You can find me on <a href="https://github.com/wrunion" target="_blank" rel="noreferrer">GitHub</a> and <a href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">LinkedIn</a>.
+            </p>
+            </div>
+          </section>
+        </section>
+
+      </main>
+    </div>
+  </div>
+  <footer>
+    <div style="height: 40px; margin-left: 3em">
+      <div style="display: flex; justify-content: flex-start; align-items: center">
+        <a>
+          Winter A. Runion | 2021
+        </a>
+        <!-- Github and LinkedIn links  -->
+        <a class="item" href="https://github.com/wrunion" target="_blank" rel="noreferrer">
+          <i class="ui icon link grey github large"></i> 
+        </a>  
+        <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
+          <i class="ui icon link grey linkedin large"></i> 
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
+
+<script>
+  function toggle() { $('.ui.sidebar').sidebar('toggle') }
+  // sidebar settings 
+  $('.ui.sidebar')
+    .sidebar('setting', 'dimPage', false)
+    .sidebar('setting', 'transition', 'overlay')
+    .sidebar('show');
+
+  let mediaQuerySmall = window.matchMedia('(max-width: 600px)');
+
+  mediaQuerySmall.addListener(function(changed) {
+    if (changed.matches) {
+      $('.ui.vertical').addClass('top').removeClass('right').addClass('sidebar').removeClass('visible');
+    } else {
+      $('.ui.vertical').removeClass('visible').addClass('right').removeClass('top').sidebar('show');
+    }
+  });
+
+  // for gif "pause feature" in "work" section 
+  // accessibility code for users who have the "reduced motion" setting enabled on their browsers
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce))");
+  const details = document.querySelector(".object-and-details > details");
+
+  if (mediaQuery.matches) {
+    details.removeAttribute("open");
+  }
+
+</script>
