@@ -1,19 +1,16 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
-    <!-- semantic links  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-
-    <!-- custom styles  -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- TODO: go back and import only the scripts for types of elements used (accordion, button, etc). check here for examples: https://cdnjs.com/libraries/semantic-ui -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <!-- elements used: form, container, button, input, checkbox -->
     
+    <!-- semantic links  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <!-- custom styles  -->
     <link rel="stylesheet" href="styles.css" type="text/css" />
     <title>Winter A. Runion UX/UI Portfolio</title>
   </head>
@@ -56,11 +53,21 @@
       <div class="item" id="contact-nav" tag="contact"
         onclick="navClick(this.id)">
         <a class="header" href="#contact">Contact</a>
-          <div class="menu">
+          <!-- <div class="menu">
             <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
               <i class="ui icon linkedin alternate large"></i> LinkedIn
             </a>
             <a class="item" href="https://github.com/wrunion" target="_blank" rel="noreferrer">
+              <i class="ui icon github large"></i> Github
+            </a>
+          </div> -->
+          <div class="menu">
+            <a class="item" href="https://www.linkedin.com/in/wrunion/"
+              onclick="return(confirmExternalClick())" target="_blank" rel="noreferrer">
+              <i class="ui icon linkedin alternate large"></i> LinkedIn
+            </a>
+            <a class="item" onclick="return(confirmExternalClick())" 
+              href="https://github.com/wrunion" target="_blank" rel="noreferrer">
               <i class="ui icon github large"></i> Github
             </a>
           </div>
@@ -155,7 +162,7 @@
                   Learned to organize, conduct, and analyze user interviews
                 </li>
                 <li>
-                  Took part in all stages of the UX Design process, from idea, to wireframes, to writing the code myself and actualizing the designs on the live site.
+                  Took part in all stages of the UX/UI Development process, from idea, to wireframes, to writing the React code for the live site.
                 </li>
               </ul>
           
@@ -163,13 +170,13 @@
             Front End Development: 
             <ul>
               <li>
-                I also worked on the front end, using React the component libraries Antd Design and Material UI to create an accessible, mobile-friendly web application.
+                Worked on the front end, using React the component libraries Antd Design and Material UI to create an accessible, mobile-friendly web application.
               </li>
               <li>
-                I conducted a thorough accessibility audit of the application, then implemented the changes step by step, working with a team of 3.
+                Conducted an accessibility audit and implemented changes to the application UI.
               </li>
               <li>
-                I also consulted on API design, and took part in collaborative design session with the data leads.
+                Consulted on API design via collaborative design sessions with the UX and data team leads. 
               </li>
             </ul>
 
@@ -181,14 +188,12 @@
               </video>
             </div>
             <p class="mb-normal">
-              This mapping tool is not yet available for public viewing, but these images highlight the "eviction search" feature of the site.
+              The Anti-Eviction Mapping Tool is not yet available for public viewing, but this video highlights the "eviction search" feature of the site.
             </p>
             <div class="ui divider"></div>
           </section>
-          <!-- end eb -->
           
             <!-- Epicodus  -->
-            
             <section class="project-div work-text mt-normal" id="epicodus">
               <h3>
                 <a>
@@ -199,44 +204,14 @@
                 In 2020 I completed the JavaScript/React Front End Development Program at Epicodus in Portland, Oregon.
               </p>
               <p>
-                For my Capstone Project, I found an open data API with data about 1000+ agencies that provide social services for women in NYC. Then I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
+                For my Capstone Project, I found an open data API with data about 1000+ agencies that provide social services for women in NYC. Then I created the <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
               </p>
               <p>
                 Social services are a passion of mine, but information about these opportunities can be tricky to find, and confusing to access. Which is where my passion for UX in social service websites comes in!
               </p>
-
-              <!-- <p class="work-text">
-                This app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
+              <p class="work-text">
+                The NYC Social Service app allows users to search by up to three different categories, plus a New York neighborhood, then see resources that meet those requirements. 
               </p>
-              <p>
-                It's a bite-sized demo of what I do in my work now with the Mapping Action Collective - I collaborate with non-profits to get resources to as many people as possible, using data and design.
-              </p> -->
-              <!-- <p>
-                In 2020 I completed the JavaScript/React Front End Development Program at one of Portland's best known, in-person bootcamps: Epicodus. 
-              </p>
-              <p>
-                For my Capstone Project, I found an open data API with data about 1000+ agencies that provide social services for women in NYC. Then I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
-              </p>
-              <p>
-                Social services are a passion of mine; they provide people with everything from recreation to healthcare, and can improve people's quality of life. But information about these opportunities can be tricky to find, and confusing to access.
-              </p>
-              <p>
-                Which is where my passion for UX in social service websites comes in!
-              </p> -->
-
-
-              <!-- <h3>
-                <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">
-                  NYC Social Service Search
-                </a>
-              </h3>
-              <p>
-                In 2020 I completed the JavaScript/React Front End Development Program at one of Portland's best known, in-person bootcamps: Epicodus. 
-              </p>
-              <p>
-                For my Capstone Project, I created <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">NYC Women's Social Service Resource Finder</a>.
-              </p> -->
-
             
               <!-- NYC gif  -->
               <div class="object-and-details work-gif" style="margin-left: .25em">
@@ -250,19 +225,12 @@
                   </div>
                 </details>
               </div>
-              <p>
+              <p class="strong">
                 <a href="https://wrunion.github.io/epicodus-capstone/" target="_blank" rel="noreferrer">View the demo</a> | <a href="https://github.com/wrunion/epicodus-capstone" target="_blank" rel="noreferrer">View the code</a>
-              </p>
-              <p class="work-text">
-                This app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
               </p>
               <p>
                 It's a bite-sized demo of what I do in my work now with the Mapping Action Collective - I collaborate with non-profits to get resources to as many people as possible, using data and design.
               </p>
-              <!-- <p class="work-text ">
-                The app allows users to search by up to three different categories, and a New York neighborhood, and then see resources that meet those requirements. 
-              </p> -->
-  
             </section>          
             <div class="ui divider"></div>
           
@@ -274,10 +242,13 @@
               </a>
             </h3>
             <p>
-              The Rose City Resource Guide is a collaboration between the Portland non-profit Street Roots, and the Mapping Action Collective (MAC). It's a searchable map of free and low-cost resources for houseless adults in Oregon.
+              The Rose City Resource Guide is a collaboration between the Mapping Action Collective (MAC), and the Portland non-profit Street Roots. It's a searchable map of free and low-cost resources for houseless adults in Oregon.
             </p>
             <p>  
-              I work at the Mapping Action Collective, and help maintain the site. I'm also creating technical documentation for Street Roots staff, and redesigning the entire UI, which has been exciting!   
+              I work at the Mapping Action Collective, and help maintain the site. I'm also creating technical documentation for Street Roots staff, and redesigning the UI for a brighter and more modern feel.
+            </p>
+            <p>
+              Below is a preview of the upcoming redesign:
             </p>
             <div style="max-width: 450px; margin-left: 8%; margin-right: 5%">
               <video controls width="100%" class="video-container">
@@ -297,19 +268,22 @@
           
               <ul>
                 <li>
-                  Creating an interactive user guide to help the Street Roots staff update their data more easily 
+                  Creating an interactive user guide and user flow for the Street Roots staff to update their data in real time 
                 </li>
                 <li>
-                  Redesigning the user interface, which means creating wireframes with Figma, then bringing them to life in code. 
+                  Redesigning the user interface: designing with Figma, then bringing my designs to life with React, Semantic UI, and SCSS. 
                 </li>
                 <li>
-                  Healthy Transitions is also a web app mapping tool, but this time with mental health resources for youth.
+                  I'm also co-lead on a spin-off project: Healthy Transitions, which is a collaboration with Portland State University. 
                 </li>
                 <li>
-                  I'm the lead UX/UI developer on a team of 4.
+                  Healthy Transitions is a web app mapping tool, focused on mental health resources for youth.
                 </li>
                 <li>
-                  Since it's a small team, I wear more hats than that, including Product Owner, but the role I most enjoy and excel at is UX/UI development. 
+                  I'm the lead UX/UI developer.
+                </li>
+                <li>
+                  It's a small team of 4, so I wear more hats than that, but the role I most enjoy and excel at is UX/UI development and design. 
                 </li>
               </ul>
           
@@ -359,13 +333,13 @@
                   JavaScript/React
                 </li>
                 <li>
-                  React component libraries, including Semantic UI, Material UI, and Bootstrap React
+                  React component libraries, including Semantic UI, Material UI, and Bootstrap
                 </li>
                 <li>
                   HTML/CSS/SASS
                 </li>
                 <li>
-                  If it's code that creates something for the user to see, I want to be there. 
+                  Responsive, mobile-first design
                 </li>
               </ul>
             </section>
@@ -377,13 +351,13 @@
                   Creating wireframes and prototypes
                 </li>
                 <li>
-                  Coordinating and conducting user research 
+                  Analyzing user research 
                 </li>
                 <li>
-                  Using research insights to create user journeys and user flows
+                  Creating user journeys and user flows
                 </li>
                 <li>
-                  Bringing designs to life with React and CSS
+                  Building the final product with React/CSS
                 </li>
               </ul>
             </section>
@@ -398,13 +372,7 @@
                   Working understanding of SQL, including PostgreSQL
                 </li>
                 <li>
-                  User authentication with Passport.js
-                </li>
-                <li>
-                  Deploying applications on Heroku
-                </li>
-                <li>
-                  Building out static sites using EJS (Embedded JavaScript Templates)
+                  Creating backend administrative sites for client use
                 </li>
               </ul>
             </section>
@@ -419,7 +387,7 @@
                   5 years of experience in design and digital photography for my own design business
                 </li>
                 <li>
-                  A JavaScript/React Front End Web Development Certification from Epicodus
+                  A JavaScript/React Front End Web Development certification from Epicodus
                 </li>
                 <li>
                   A creative drive that never lets up
@@ -492,28 +460,3 @@
   </footer>
   <script src="scripts.js"></script>
 </html>
-
-<script>
-
-navClick = id => {
-  /* grab all "items" in the navbar */
-  let navList = [...document.getElementsByClassName('item')]
-  /* grab the id of the item clicked */
-  let target = document.getElementById(id);
-  /* remove previous "active" classes from all items; add active class to selected item only  */
-  navList.forEach(function(item) {
-    item.classList.remove('active')
-  }); 
-  target.classList.add('active');
-
-  /* scroll to appropriate section */
-  let sectionId = document.getElementById(id).getAttribute("tag");
-  let targetSection = document.getElementById(sectionId)
-  console.log(sectionId, target)
-
-  targetSection.scrollIntoView();
-}
-
-  function toggle() { $('.ui.sidebar').sidebar('toggle') }
-
-</script>
