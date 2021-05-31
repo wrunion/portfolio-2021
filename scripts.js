@@ -17,7 +17,14 @@ $('.ui.sidebar')
       $('.ui.vertical').removeClass('visible').addClass('right').removeClass('top').sidebar('show');
     }
   });
-function toggle() { $('.ui.sidebar').sidebar('toggle') }
+  
+function toggle() { 
+  if (mediaQuerySmall.matches) {
+    $('.ui.vertical').addClass('top').removeClass('right').addClass('sidebar').sidebar('toggle');
+  } else {
+    $('.ui.vertical').removeClass('visible').addClass('right').removeClass('top').sidebar('toggle');
+  }
+}
 
 /* custom functionality for the menu */
 navClick = id => {
@@ -37,9 +44,6 @@ navClick = id => {
 
   targetSection.scrollIntoView();
 }
-
-const mediaQueryLarge = window.matchMedia('(min-width: 891px)');
-
 
   // for gif "pause feature" in "work" section 
   // accessibility code for users who have the "reduced motion" setting enabled on their browsers
