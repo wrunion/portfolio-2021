@@ -92,6 +92,7 @@ section {
   margin-top: 2.5em;
   margin-bottom: 2.5em;
   margin-right: 25px;
+  max-width: 550px;
 }
 
 .about-text {

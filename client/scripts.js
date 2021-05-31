@@ -2,15 +2,13 @@ function confirmExternalClick() {
   return confirm(`This will take you to an external site. Click "OK" to continue or "Cancel" to stay.`);
 }
   
-  
-  
-  // sidebar settings 
-  $('.ui.sidebar')
-    .sidebar('setting', 'dimPage', false)
-    .sidebar('setting', 'transition', 'overlay')
-    .sidebar('show');
+// initial sidebar settings 
+$('.ui.sidebar')
+  .sidebar('setting', 'dimPage', false)
+  .sidebar('setting', 'transition', 'overlay');
 
-  let mediaQuerySmall = window.matchMedia('(max-width: 890px)');
+
+  const mediaQuerySmall = window.matchMedia('(max-width: 890px)');
 
   mediaQuerySmall.addListener(function(changed) {
     if (changed.matches) {
@@ -36,11 +34,11 @@ navClick = id => {
   /* scroll to appropriate section */
   let sectionId = document.getElementById(id).getAttribute("tag");
   let targetSection = document.getElementById(sectionId)
-  console.log(sectionId, target)
 
   targetSection.scrollIntoView();
 }
 
+const mediaQueryLarge = window.matchMedia('(min-width: 891px)');
 
 
   // for gif "pause feature" in "work" section 
@@ -51,3 +49,13 @@ navClick = id => {
   if (mediaQuery.matches) {
     details.removeAttribute("open");
   }
+
+  $(document).ready(() => {
+
+    const mediaQueryLarge = window.matchMedia('(min-width: 891px)');
+
+    if (mediaQueryLarge.matches) {
+      $('.ui.sidebar').sidebar('show'); 
+    }
+
+  })
