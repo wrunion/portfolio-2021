@@ -97,6 +97,14 @@ section {
   margin-left: 2em;
 }
 
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
 /* Styles that were previously in index.ejs, aka "primary.ejs" */
 .content-home {
   margin-left: 3em;
