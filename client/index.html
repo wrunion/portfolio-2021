@@ -24,16 +24,18 @@
         <i class="ui icon bars center aligned dark-grey-text large" onclick="toggle()"></i>
         <a href="https://github.com/wrunion" target="_blank" rel="noreferrer">
           <i class="ui icon link grey github large"></i> 
-        <!-- </a>   -->
+        </a>  
         <a href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
           <i class="ui icon link grey linkedin large"></i> 
         </a>
       </div>
       </div>
-      <div class="item">
+      <div class="item" id="about-nav" tag="about"
+        onclick="navClick(this.id)">
         <a class="header" href="#about">About</a>
       </div>
-      <div class="item">
+      <div class="item" id="work-nav" tag="work"
+        onclick="navClick(this.id)">
         <a class="header" href="#work">Work</a>
         <div class="menu">
           <a class="item" href="#evictorbook">Anti-Eviction Map</a>
@@ -41,7 +43,8 @@
           <a class="item" href="#rose-city-resource">Rose City Resource</a>
         </div>
       </div>
-      <div class="item">
+      <div class="item" id="skills-nav" tag="skills"
+        onclick="navClick(this.id)">
         <a class="header" href="#skills">Skills</a>
         <div class="menu">
           <a class="item" href="#ux-ui">UX/UI Design</a>
@@ -50,7 +53,8 @@
           <a class="item" href="#education">Education</a>
         </div>
       </div>
-      <div class="item">
+      <div class="item" id="contact-nav" tag="contact"
+        onclick="navClick(this.id)">
         <a class="header" href="#contact">Contact</a>
           <div class="menu">
             <a class="item" href="https://www.linkedin.com/in/wrunion/" target="_blank" rel="noreferrer">
@@ -100,7 +104,7 @@
         <!-- About  -->
         <section id="about">
           <div class="about-div">
-            <div class="about-image">
+            <div class="about-image" style="min-width: 200px">
               <img src="public/images/profile.png" 
                 alt="Portrait of a white woman with brown hair and glasses in a red plaid collared shirt" 
                 class="ui image left aligned circular small" />
@@ -444,35 +448,30 @@
       </div>
     </div>
   </footer>
-
-  </body>
+  <script src="scripts.js"></script>
 </html>
 
 <script>
+
+navClick = id => {
+  /* grab all "items" in the navbar */
+  let navList = [...document.getElementsByClassName('item')]
+  /* grab the id of the item clicked */
+  let target = document.getElementById(id);
+  /* remove previous "active" classes from all items; add active class to selected item only  */
+  navList.forEach(function(item) {
+    item.classList.remove('active')
+  }); 
+  target.classList.add('active');
+
+  /* scroll to appropriate section */
+  let sectionId = document.getElementById(id).getAttribute("tag");
+  let targetSection = document.getElementById(sectionId)
+  console.log(sectionId, target)
+
+  targetSection.scrollIntoView();
+}
+
   function toggle() { $('.ui.sidebar').sidebar('toggle') }
-  // sidebar settings 
-  $('.ui.sidebar')
-    .sidebar('setting', 'dimPage', false)
-    .sidebar('setting', 'transition', 'overlay')
-    .sidebar('show');
-
-  let mediaQuerySmall = window.matchMedia('(max-width: 600px)');
-
-  mediaQuerySmall.addListener(function(changed) {
-    if (changed.matches) {
-      $('.ui.vertical').addClass('top').removeClass('right').addClass('sidebar').removeClass('visible');
-    } else {
-      $('.ui.vertical').removeClass('visible').addClass('right').removeClass('top').sidebar('show');
-    }
-  });
-
-  // for gif "pause feature" in "work" section 
-  // accessibility code for users who have the "reduced motion" setting enabled on their browsers
-  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce))");
-  const details = document.querySelector(".object-and-details > details");
-
-  if (mediaQuery.matches) {
-    details.removeAttribute("open");
-  }
 
 </script>

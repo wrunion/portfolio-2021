@@ -1,6 +1,7 @@
 /* -------- GLOBAL styles ------------- */
-
-
+html {
+  scroll-behavior: smooth;
+}
 
 /* ---------- BANNER styles ------------- */
 .banner-preview {
@@ -90,7 +91,7 @@ section {
   align-items: center;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
-  margin-right: 250px;
+  margin-right: 25px;
 }
 
 .about-text {
@@ -146,7 +147,7 @@ section {
 .work-div {
   margin-top: 2.5em;
   margin-bottom: 2.5em;
-  margin-right: 250px;
+  margin-right: 25px;
   margin-left: 2.5em;
 }
 
